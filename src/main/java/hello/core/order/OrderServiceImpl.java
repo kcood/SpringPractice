@@ -10,6 +10,7 @@ public class OrderServiceImpl implements OrderService {
 
     //MemberRepository에서 회원 찾아야되니까
    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
 
     @Override
