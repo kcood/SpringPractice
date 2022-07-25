@@ -17,15 +17,16 @@ class StatefulServiceTest {
 
        //ThreadA: A사용자가 1만원 주문
       //statefulService1.order("userA", 10000);
-      int userAPrice = statefulService1.order("userA", 10000);
+        int userAPrice = statefulService1.order("userA", 10000);
         //ThreadB: B사용자가 2만원 주문
       //statefulService1.order("userA", 20000);
-        int userBPrice = statefulService1.order("userA", 20000);
+        int userBPrice = statefulService1.order("userB", 20000);
 
       //ThreadA: 사용자A가 주문 금액을 조회
 //        int price = statefulService1.getPrice();
 //        System.out.println("price = " + price);
-        System.out.println("price = " + userAPrice);
+        System.out.println("Aprice = " + userAPrice);
+        System.out.println("Bprice = " + userBPrice);
 
         //Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
